@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Abhishek &amp; Bhavna Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #f8f1ea;
+        --cream-deep: #f1e6dc;
+        --blush: #f4e8e4;
+        --rose: #c4878a;
+        --rose-deep: #a8686d;
+        --champagne: #c4a574;
+        --champagne-deep: #a88858;
+        --ink: #3d3230;
+        --ink-soft: #5c504c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+
+      body {
+        font-family: 'Outfit', 'Segoe UI', sans-serif;
+        color: var(--ink);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .sheet {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        padding: 14mm 16mm 12mm;
+        background:
+          radial-gradient(ellipse 70% 45% at 12% 18%, rgba(196, 135, 138, 0.14), transparent 55%),
+          radial-gradient(ellipse 60% 40% at 88% 78%, rgba(196, 165, 116, 0.16), transparent 50%),
+          linear-gradient(180deg, var(--cream) 0%, var(--blush) 48%, var(--cream-deep) 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .ornament {
+        width: 56px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--champagne), transparent);
+        margin: 0.55rem auto;
+      }
+
+      .blessing {
+        margin: 0;
+        font-size: 9.5pt;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--rose);
+        font-weight: 400;
+      }
+
+      .names {
+        margin: 0.35rem 0 0;
+        font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+        font-weight: 500;
+        font-size: 42pt;
+        line-height: 0.95;
+        color: var(--ink);
+      }
+
+      .amp {
+        display: block;
+        font-family: 'Great Vibes', cursive;
+        font-size: 22pt;
+        color: var(--champagne-deep);
+        line-height: 1;
+        margin: 0.05em 0;
+      }
+
+      .lead {
+        margin: 0.55rem 0 0;
+        max-width: 118mm;
+        font-weight: 300;
+        font-size: 11pt;
+        line-height: 1.45;
+        color: var(--ink-soft);
+      }
+
+      .photo-wrap {
+        margin: 0.9rem 0 0.65rem;
+        width: 118mm;
+        height: 58mm;
+        overflow: hidden;
+        border-radius: 2px;
+        box-shadow: 0 14px 36px rgba(61, 50, 48, 0.14);
+        background: #efe4dc;
+      }
+
+      .photo-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 18%;
+        display: block;
+      }
+
+      .dates-line {
+        margin: 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 14pt;
+        letter-spacing: 0.08em;
+        color: var(--champagne-deep);
+      }
+
+      .events-title {
+        margin: 0.85rem 0 0.35rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 500;
+        font-size: 18pt;
+        color: var(--ink);
+      }
+
+      .events {
+        width: 100%;
+        max-width: 158mm;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.55rem;
+        text-align: left;
+      }
+
+      .event {
+        padding: 0.55rem 0.7rem;
+        border-top: 1px solid rgba(196, 135, 138, 0.32);
+      }
+
+      .event:last-child {
+        border-bottom: 1px solid rgba(196, 135, 138, 0.32);
+      }
+
+      .event-name {
+        margin: 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 600;
+        font-size: 13.5pt;
+        color: var(--ink);
+      }
+
+      .event-when {
+        margin: 0.15rem 0 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 11.5pt;
+        color: var(--rose-deep);
+      }
+
+      .event-venue {
+        margin: 0.2rem 0 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 12pt;
+        font-weight: 500;
+        color: var(--ink);
+      }
+
+      .event-address {
+        margin: 0.1rem 0 0;
+        font-size: 9.5pt;
+        font-weight: 300;
+        line-height: 1.4;
+        color: var(--ink-soft);
+      }
+
+      .coords {
+        margin: 0.15rem 0 0;
+        font-size: 8.5pt;
+        letter-spacing: 0.04em;
+        color: var(--champagne-deep);
+      }
+
+      .closing {
+        margin-top: auto;
+        padding-top: 0.7rem;
+      }
+
+      .closing-script {
+        margin: 0;
+        font-family: 'Great Vibes', cursive;
+        font-size: 22pt;
+        color: var(--rose);
+        line-height: 1;
+      }
+
+      .closing-note {
+        margin: 0.35rem 0 0;
+        font-size: 9.5pt;
+        font-weight: 300;
+        color: var(--ink-soft);
+      }
+
+      .closing-names {
+        margin: 0.45rem 0 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 13pt;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+      }
+
+      .heart {
+        width: 22px;
+        height: auto;
+        margin-top: 0.45rem;
+        display: inline-block;
+      }
+
+      .footer-line {
+        margin: 0.55rem 0 0;
+        font-size: 8pt;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #8a7c76;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="sheet">
+      <p class="blessing">With love and blessings</p>
+      <h1 class="names">
+        Abhishek
+        <span class="amp">&amp;</span>
+        Bhavna
+      </h1>
+      <div class="ornament" aria-hidden="true"></div>
+      <p class="lead">
+        request the pleasure of your company as they begin a life together.
+      </p>
+
+      <div class="photo-wrap">
+        <img src="../public/images/couple-hero.png" alt="Abhishek and Bhavna" />
+      </div>
+
+      <p class="dates-line">7 · 11 · 12 December 2026</p>
+      <h2 class="events-title">Our wedding events</h2>
+
+      <ol class="events">
+        <li class="event">
+          <h3 class="event-name">Tika Lagan</h3>
+          <p class="event-when">Monday, 7 December 2026 · 4:00 PM</p>
+          <p class="event-venue">Sindhi Dharamshala</p>
+          <p class="event-address">A-Block, Trans Yamuna Colony, Rambagh, Agra</p>
+        </li>
+        <li class="event">
+          <h3 class="event-name">Wedding</h3>
+          <p class="event-when">Friday, 11 December 2026 · 7:00 PM</p>
+          <p class="event-venue">P.S Farm House</p>
+          <p class="event-address">Bajna, Mathura</p>
+          <p class="coords">Maps: 27.895925, 77.682122</p>
+        </li>
+        <li class="event">
+          <h3 class="event-name">Reception (Pritibhoj)</h3>
+          <p class="event-when">Saturday, 12 December 2026 · 7:00 PM</p>
+          <p class="event-venue">Gupta Palace</p>
+          <p class="event-address">
+            Royal Chauraha, Phase-2, Trans Yamuna Colony, Agra - 6
+          </p>
+        </li>
+      </ol>
+
+      <div class="closing">
+        <p class="closing-script">Shubh vivah</p>
+        <p class="closing-note">
+          We look forward to celebrating with you in Agra and Mathura.
+        </p>
+        <p class="closing-names">Abhishek &amp; Bhavna</p>
+        <svg class="heart" viewBox="0 0 64 58" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="heartFill" x1="12%" y1="8%" x2="88%" y2="92%">
+              <stop offset="0%" stop-color="#e8b4b8" />
+              <stop offset="45%" stop-color="#c4878a" />
+              <stop offset="100%" stop-color="#c4a574" />
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#heartFill)"
+            stroke="rgba(168,136,88,0.35)"
+            stroke-width="0.7"
+            d="M32 52.5C18.2 42.2 8.5 33.4 8.5 22.8 8.5 14.6 14.8 9 22.2 9c4.3 0 7.9 2.1 9.8 5.3C33.9 11.1 37.5 9 41.8 9 49.2 9 55.5 14.6 55.5 22.8c0 10.6-9.7 19.4-23.5 29.7z"
+          />
+        </svg>
+        <p class="footer-line">December 2026 · Agra &amp; Mathura</p>
+      </div>
+    </article>
+  </body>
+</html>

@@ -410,6 +410,37 @@
   color: var(--ink);
 }
 
+.closing-heart {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.35rem;
+}
+
+.closing-heart-svg {
+  width: 2.35rem;
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(196, 135, 138, 0.28));
+  animation: heart-soft-pulse 3.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.closing-heart-path {
+  stroke: rgba(168, 136, 88, 0.35);
+  stroke-width: 0.7;
+}
+
+@keyframes heart-soft-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.88;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
 .footer {
   position: relative;
   z-index: 1;
@@ -460,7 +491,8 @@
   .hero-photo,
   .hero-copy,
   .reveal,
-  .portrait-photo {
+  .portrait-photo,
+  .closing-heart-svg {
     animation: none !important;
     transition: none !important;
   }
@@ -468,6 +500,11 @@
   .reveal,
   .hero-copy {
     opacity: 1;
+    transform: none;
+  }
+
+  .closing-heart-svg {
+    opacity: 0.95;
     transform: none;
   }
 }

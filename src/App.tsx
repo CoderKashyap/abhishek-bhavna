@@ -226,6 +226,35 @@ export default function App() {
               Your presence is the greatest gift.
             </p>
             <p className="closing-names">Abhishek &amp; Bhavna</p>
+            <div className="closing-heart" aria-hidden="true">
+              <svg
+                className="closing-heart-svg"
+                viewBox="0 0 64 58"
+                xmlns="http://www.w3.org/2000/svg"
+                focusable="false"
+              >
+                <defs>
+                  <linearGradient id="heartFill" x1="12%" y1="8%" x2="88%" y2="92%">
+                    <stop offset="0%" stopColor="#e8b4b8" />
+                    <stop offset="45%" stopColor="#c4878a" />
+                    <stop offset="100%" stopColor="#c4a574" />
+                  </linearGradient>
+                  <linearGradient id="heartSheen" x1="20%" y1="0%" x2="70%" y2="80%">
+                    <stop offset="0%" stopColor="#fff8f2" stopOpacity="0.55" />
+                    <stop offset="55%" stopColor="#fff8f2" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                <path
+                  className="closing-heart-path"
+                  fill="url(#heartFill)"
+                  d="M32 52.5C18.2 42.2 8.5 33.4 8.5 22.8 8.5 14.6 14.8 9 22.2 9c4.3 0 7.9 2.1 9.8 5.3C33.9 11.1 37.5 9 41.8 9 49.2 9 55.5 14.6 55.5 22.8c0 10.6-9.7 19.4-23.5 29.7z"
+                />
+                <path
+                  fill="url(#heartSheen)"
+                  d="M32 52.5C18.2 42.2 8.5 33.4 8.5 22.8 8.5 14.6 14.8 9 22.2 9c4.3 0 7.9 2.1 9.8 5.3C33.9 11.1 37.5 9 41.8 9 49.2 9 55.5 14.6 55.5 22.8c0 10.6-9.7 19.4-23.5 29.7z"
+                />
+              </svg>
+            </div>
           </Reveal>
         </section>
       </main>
