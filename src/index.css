@@ -1,0 +1,55 @@
+:root {
+  --cream: #f8f1ea;
+  --cream-deep: #f1e6dc;
+  --blush-wash: #f4e8e4;
+  --rose: #c4878a;
+  --rose-deep: #a8686d;
+  --champagne: #c4a574;
+  --champagne-deep: #a88858;
+  --ink: #3d3230;
+  --ink-soft: #5c504c;
+  --ink-muted: #8a7c76;
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-body: 'Outfit', 'Segoe UI', sans-serif;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--ink);
+  background: var(--cream);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+img {
+  max-width: 100%;
+}
+
+a:focus-visible,
+.hero-cta:focus-visible,
+.maps-link:focus-visible {
+  outline: 2px solid var(--champagne);
+  outline-offset: 3px;
+}
+
+#root {
+  min-height: 100vh;
+}
